@@ -1,0 +1,1440 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #fffdf5;
+    color: #302b20;
+    overflow-x: hidden;
+}
+
+
+/* =========================
+   SECCIONES
+========================= */
+
+.seccion {
+    min-height: 100vh;
+    padding: 100px 20px 120px;
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.seccion:not(.hero) {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.seccion.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.contenedor {
+    width: 100%;
+    max-width: 1000px;
+    text-align: center;
+    position: relative;
+    z-index: 5;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+    background:
+        linear-gradient(
+            rgba(25, 20, 5, 0.5),
+            rgba(25, 20, 5, 0.7)
+        ),
+        url("img/portada.jpg");
+
+    background-size: cover;
+    background-position: center;
+    color: white;
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+
+    background:
+        radial-gradient(
+            circle at center,
+            transparent 10%,
+            rgba(0,0,0,0.5)
+        );
+}
+
+.hero-contenido {
+    max-width: 800px;
+    position: relative;
+    z-index: 5;
+    animation: aparecer 1.5s ease;
+}
+
+.flor-grande {
+    font-size: 90px;
+    animation: flotar 3s ease-in-out infinite;
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.3));
+}
+
+.mini-titulo {
+    font-size: 15px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+h1,
+h2,
+h3 {
+    font-family: "Caveat", cursive;
+}
+
+.hero h1 {
+    font-size: clamp(60px, 10vw, 110px);
+    line-height: 0.9;
+    margin-bottom: 30px;
+}
+
+.subtitulo {
+    max-width: 650px;
+    margin: auto;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+
+/* =========================
+   TITULOS
+========================= */
+
+.numero-seccion {
+    font-size: 13px;
+    letter-spacing: 5px;
+    color: #d99b00;
+}
+
+h2 {
+    font-size: clamp(45px, 7vw, 75px);
+    margin: 10px 0 20px;
+}
+
+.linea {
+    width: 100px;
+    height: 3px;
+    background: #eab308;
+    margin: 20px auto 40px;
+    border-radius: 20px;
+}
+
+.texto-intro {
+    max-width: 650px;
+    margin: 0 auto 40px;
+    line-height: 1.8;
+    font-size: 17px;
+}
+
+
+/* =========================
+   BOTONES
+========================= */
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+}
+
+.boton-principal,
+.boton-secundario {
+    display: block;
+    margin: 20px auto;
+    padding: 16px 30px;
+
+    border-radius: 50px;
+
+    font-size: 15px;
+    font-weight: 500;
+
+    transition: all 0.3s ease;
+
+    position: relative;
+    overflow: hidden;
+}
+
+.boton-principal {
+    border: none;
+    background: linear-gradient(
+        135deg,
+        #ffd84d,
+        #e8a900
+    );
+
+    color: #342500;
+
+    box-shadow:
+        0 10px 30px rgba(220, 170, 0, 0.3);
+}
+
+.boton-principal:hover {
+    transform: translateY(-5px) scale(1.03);
+
+    box-shadow:
+        0 15px 40px rgba(220, 170, 0, 0.5);
+}
+
+.boton-secundario {
+    border: 1px solid rgba(255,255,255,0.5);
+    background: rgba(255,255,255,0.1);
+    color: white;
+    backdrop-filter: blur(10px);
+}
+
+.boton-secundario:hover {
+    background: white;
+    color: #3b3000;
+}
+
+
+/* =========================
+   FLORES
+========================= */
+
+.ramo {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    gap: 10px;
+    margin: 40px auto;
+}
+
+.flor-interactiva {
+    font-size: 65px;
+    animation: florMovimiento 3s ease-in-out infinite;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.flor-interactiva:nth-child(2) {
+    animation-delay: .3s;
+}
+
+.flor-interactiva:nth-child(3) {
+    animation-delay: .6s;
+}
+
+.flor-interactiva:nth-child(4) {
+    animation-delay: .9s;
+}
+
+.flor-interactiva:nth-child(5) {
+    animation-delay: 1.2s;
+}
+
+.flor-interactiva:hover {
+    transform: scale(1.3) rotate(10deg);
+}
+
+
+/* =========================
+   CARTAS
+========================= */
+
+.carta,
+.carta-corta {
+    max-width: 800px;
+    margin: auto;
+
+    padding: 50px 35px;
+
+    background: rgba(255,255,255,0.96);
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 20px 60px rgba(0,0,0,0.15);
+
+    text-align: left;
+
+    line-height: 1.9;
+
+    position: relative;
+}
+
+.carta p,
+.carta-corta p {
+    margin-bottom: 20px;
+}
+
+.sello {
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.frase-destacada,
+.frase-grande {
+    font-family: "Caveat", cursive;
+    font-size: 30px;
+    color: #b57b00;
+    text-align: center;
+    margin: 35px 0;
+}
+
+.firma {
+    font-family: "Caveat", cursive;
+    font-size: 30px;
+    text-align: right;
+}
+
+
+/* =========================
+   FONDO OSCURO
+========================= */
+
+.fondo-oscuro {
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            #55471e,
+            #181711 60%
+        );
+
+    color: #fff;
+}
+
+.fondo-oscuro .numero-seccion {
+    color: #ffd84d;
+}
+
+.fondo-oscuro h2 {
+    color: #ffe477;
+}
+
+
+/* =========================
+   TEXTO AMOR
+========================= */
+
+.texto-amor {
+    max-width: 750px;
+    margin: auto;
+    line-height: 2;
+    font-size: 18px;
+}
+
+.texto-amor p {
+    margin-bottom: 25px;
+}
+
+.texto-amor h3 {
+    font-size: 55px;
+    color: #d69c00;
+    margin: 25px;
+}
+
+
+/* =========================
+   FONDO AMARILLO
+========================= */
+
+.fondo-amarillo {
+    background:
+        radial-gradient(
+            circle,
+            #fff7c7,
+            #f9df67
+        );
+}
+
+
+/* =========================
+   JARDÍN
+========================= */
+
+.jardin {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 700px;
+    margin: 50px auto;
+}
+
+.flor-boton {
+    border: none;
+    background: rgba(255,255,255,0.7);
+
+    border-radius: 30px;
+
+    padding: 30px 10px;
+
+    font-size: 65px;
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.1);
+
+    transition: all 0.4s ease;
+}
+
+.flor-boton span {
+    display: block;
+    font-size: 13px;
+    margin-top: 10px;
+    color: #8b6900;
+}
+
+.flor-boton:hover {
+    transform:
+        translateY(-10px)
+        rotate(-3deg)
+        scale(1.05);
+
+    box-shadow:
+        0 20px 40px rgba(150,110,0,0.25);
+}
+
+.mensaje-flor {
+    min-height: 180px;
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 30px;
+
+    background: rgba(255,255,255,0.9);
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,0.12);
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: center;
+
+    animation: aparecer 0.5s ease;
+}
+
+.mensaje-icono {
+    font-size: 50px;
+}
+
+
+/* =========================
+   FOTOS
+========================= */
+
+.foto-placeholder {
+    position: relative;
+
+    max-width: 750px;
+    min-height: 350px;
+
+    margin: 50px auto;
+
+    border-radius: 25px;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f8e28b,
+            #fff7ce
+        );
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,0.15);
+}
+
+.foto-placeholder img {
+    width: 100%;
+    height: 100%;
+    min-height: 350px;
+    object-fit: cover;
+
+    position: relative;
+    z-index: 2;
+}
+
+.placeholder-text {
+    position: absolute;
+    inset: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+    font-size: 30px;
+
+    color: #856700;
+    text-align: center;
+
+    z-index: 1;
+}
+
+.placeholder-text small {
+    font-size: 12px;
+    margin-top: 10px;
+}
+
+.dos-fotos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+
+    margin: 50px auto;
+    max-width: 800px;
+}
+
+.foto-placeholder.pequeño {
+    min-height: 300px;
+    width: 100%;
+    margin: 0;
+}
+
+.foto-placeholder.pequeño img {
+    min-height: 300px;
+}
+
+
+/* =========================
+   SORPRESA
+========================= */
+
+.sorpresa {
+    background:
+        radial-gradient(
+            circle at center,
+            #4e4118,
+            #11110e
+        );
+
+    color: white;
+}
+
+.flor-final {
+    font-size: 100px;
+    animation: flotar 2s ease-in-out infinite;
+}
+
+.sorpresa h2 {
+    color: #ffdf58;
+}
+
+.mensaje-final {
+    animation: aparecer 1.5s ease;
+}
+
+.mensaje-final h1 {
+    font-size: clamp(50px, 8vw, 90px);
+    color: #ffe06b;
+    margin: 30px 0;
+}
+
+.mensaje-final p {
+    font-size: 18px;
+    line-height: 1.9;
+    max-width: 650px;
+    margin: 15px auto;
+}
+
+.mensaje-final h3 {
+    font-size: 40px;
+    color: #ffd84d;
+    margin: 30px;
+}
+
+.ramo-final {
+    font-size: 55px;
+    animation: florMovimiento 2s ease-in-out infinite;
+}
+
+.corazon-final {
+    font-size: 80px;
+    animation: latido 1.2s infinite;
+}
+
+.final-firma {
+    font-family: "Caveat", cursive;
+    font-size: 30px !important;
+}
+
+
+/* =========================
+   MENÚ
+========================= */
+
+.menu {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    z-index: 100;
+
+    display: flex;
+    gap: 5px;
+
+    padding: 8px;
+
+    border-radius: 50px;
+
+    background: rgba(20,20,15,0.85);
+
+    backdrop-filter: blur(15px);
+
+    box-shadow:
+        0 10px 30px rgba(0,0,0,0.3);
+}
+
+.menu button {
+    border: none;
+    background: transparent;
+    color: white;
+
+    padding: 10px 14px;
+
+    border-radius: 30px;
+
+    transition: 0.3s;
+}
+
+.menu button:hover {
+    background: #e9b817;
+    color: #332700;
+}
+
+.menu span {
+    display: block;
+    font-size: 10px;
+}
+
+
+/* =========================
+   PÉTALOS Y CORAZONES
+========================= */
+
+.petalo {
+    position: fixed;
+    top: -30px;
+
+    z-index: 1;
+    pointer-events: none;
+
+    animation: caer linear forwards;
+}
+
+.corazon {
+    position: fixed;
+    bottom: -30px;
+
+    pointer-events: none;
+    z-index: 50;
+
+    animation: subir linear forwards;
+}
+
+
+/* =========================
+   OCULTO
+========================= */
+
+.oculto {
+    display: none !important;
+}
+
+
+/* =====================================================
+   JARDÍN INTERACTIVO: SEMILLA → FLOR
+===================================================== */
+
+.jardin-semilla-seccion {
+    background:
+        radial-gradient(
+            circle at 50% 30%,
+            #fff8d6 0%,
+            #ffe98a 60%,
+            #f6d54a 100%
+        );
+}
+
+.jardin-semilla-escena {
+    position: relative;
+    width: 100%;
+    max-width: 520px;
+    height: 460px;
+
+    margin: 30px auto;
+
+    background:
+        linear-gradient(
+            180deg,
+            #bde3f5 0%,
+            #e8f6fd 60%
+        );
+
+    border-radius: 25px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 20px 50px rgba(0,0,0,0.15);
+}
+
+
+/* SOL */
+
+.jardin-semilla-sol {
+    position: absolute;
+
+    top: 25px;
+    right: 35px;
+
+    width: 65px;
+    height: 65px;
+
+    background:
+        radial-gradient(
+            circle,
+            #fff176,
+            #ffb300
+        );
+
+    border-radius: 50%;
+
+    box-shadow:
+        0 0 40px #ffd54f;
+
+    animation:
+        jardinSemillaBrillar 3s ease-in-out infinite;
+}
+
+@keyframes jardinSemillaBrillar {
+
+    0%, 100% {
+        transform: scale(1);
+        box-shadow: 0 0 40px #ffd54f;
+    }
+
+    50% {
+        transform: scale(1.08);
+        box-shadow: 0 0 60px #ffca28;
+    }
+
+}
+
+
+/* NUBES */
+
+.jardin-semilla-nube {
+    position: absolute;
+
+    background: white;
+
+    border-radius: 50px;
+
+    opacity: 0.9;
+}
+
+.jardin-semilla-nube::before,
+.jardin-semilla-nube::after {
+    content: "";
+
+    position: absolute;
+
+    background: white;
+
+    border-radius: 50%;
+}
+
+.jardin-semilla-nube1 {
+    width: 80px;
+    height: 26px;
+
+    top: 50px;
+    left: 40px;
+
+    animation:
+        jardinSemillaMoverNube 22s linear infinite;
+}
+
+.jardin-semilla-nube1::before {
+    width: 40px;
+    height: 40px;
+    top: -20px;
+    left: 10px;
+}
+
+.jardin-semilla-nube1::after {
+    width: 30px;
+    height: 30px;
+    top: -15px;
+    left: 40px;
+}
+
+.jardin-semilla-nube2 {
+    width: 60px;
+    height: 20px;
+
+    top: 100px;
+    left: 200px;
+
+    animation:
+        jardinSemillaMoverNube 32s linear infinite reverse;
+}
+
+.jardin-semilla-nube2::before {
+    width: 30px;
+    height: 30px;
+    top: -15px;
+    left: 8px;
+}
+
+.jardin-semilla-nube2::after {
+    width: 24px;
+    height: 24px;
+    top: -10px;
+    left: 30px;
+}
+
+@keyframes jardinSemillaMoverNube {
+
+    from {
+        transform: translateX(-120px);
+    }
+
+    to {
+        transform: translateX(520px);
+    }
+
+}
+
+
+/* TIERRA */
+
+.jardin-semilla-tierra {
+    position: absolute;
+
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    height: 130px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #8d6e63 0%,
+            #4e342e 100%
+        );
+
+    border-top: 6px solid #6d4c41;
+
+    cursor: pointer;
+
+    transition: filter 0.3s;
+}
+
+.jardin-semilla-tierra:hover {
+    filter: brightness(1.12);
+}
+
+
+/* SEMILLA */
+
+.jardin-semilla-semilla {
+    position: absolute;
+
+    left: 50%;
+    bottom: 80px;
+
+    width: 18px;
+    height: 22px;
+
+    background:
+        radial-gradient(
+            circle at 30% 30%,
+            #a1887f,
+            #3e2723
+        );
+
+    border-radius:
+        50% 50% 40% 40% /
+        60% 60% 40% 40%;
+
+    transform:
+        translateX(-50%)
+        scale(0);
+
+    transition:
+        transform 0.4s ease;
+
+    z-index: 5;
+
+    box-shadow:
+        inset -3px -3px 4px rgba(0,0,0,0.3);
+}
+
+.jardin-semilla-semilla.plantada {
+    transform:
+        translateX(-50%)
+        scale(1);
+}
+
+
+/* TALLO */
+
+.jardin-semilla-tallo {
+    position: absolute;
+
+    left: 50%;
+    bottom: 90px;
+
+    width: 8px;
+    height: 0;
+
+    background:
+        linear-gradient(
+            90deg,
+            #2e7d32,
+            #66bb6a,
+            #2e7d32
+        );
+
+    border-radius: 4px;
+
+    transform: translateX(-50%);
+
+    transition:
+        height 1.5s ease-out;
+
+    z-index: 4;
+}
+
+
+/* HOJAS */
+
+.jardin-semilla-hoja {
+    position: absolute;
+
+    bottom: 130px;
+
+    width: 0;
+    height: 0;
+
+    background:
+        linear-gradient(
+            135deg,
+            #66bb6a,
+            #2e7d32
+        );
+
+    transform-origin: bottom center;
+
+    transition:
+        all 1s ease-out;
+
+    z-index: 5;
+
+    opacity: 0;
+}
+
+.jardin-semilla-hoja-izq {
+    left: 50%;
+
+    border-radius:
+        100% 0 100% 0;
+
+    transform:
+        translateX(-100%)
+        rotate(-30deg)
+        scale(0);
+}
+
+.jardin-semilla-hoja-der {
+    left: 50%;
+
+    border-radius:
+        0 100% 0 100%;
+
+    transform:
+        translateX(0)
+        rotate(30deg)
+        scale(0);
+}
+
+.jardin-semilla-hoja.crecida {
+    width: 45px;
+    height: 30px;
+    opacity: 1;
+}
+
+.jardin-semilla-hoja-izq.crecida {
+    transform:
+        translateX(-95%)
+        rotate(-30deg)
+        scale(1);
+}
+
+.jardin-semilla-hoja-der.crecida {
+    transform:
+        translateX(-5%)
+        rotate(30deg)
+        scale(1);
+}
+
+
+/* FLOR */
+
+.jardin-semilla-flor {
+    position: absolute;
+
+    left: 50%;
+    bottom: 235px;
+
+    width: 0;
+    height: 0;
+
+    transform:
+        translateX(-50%)
+        scale(0);
+
+    transition:
+        transform 0.8s
+        cubic-bezier(0.34, 1.56, 0.64, 1);
+
+    z-index: 6;
+}
+
+.jardin-semilla-flor.abierta {
+    transform:
+        translateX(-50%)
+        scale(1);
+
+    animation:
+        jardinSemillaViento 3s ease-in-out infinite;
+}
+
+@keyframes jardinSemillaViento {
+
+    0%, 100% {
+        transform:
+            translateX(-50%)
+            scale(1)
+            rotate(-3deg);
+    }
+
+    50% {
+        transform:
+            translateX(-50%)
+            scale(1)
+            rotate(3deg);
+    }
+
+}
+
+
+/* PÉTALOS */
+
+.jardin-semilla-petalo {
+    position: absolute;
+
+    width: 42px;
+    height: 56px;
+
+    background:
+        radial-gradient(
+            circle at 50% 30%,
+            #fff59d,
+            #ffd600 60%,
+            #f9a825
+        );
+
+    border-radius:
+        50% 50% 45% 45% /
+        60% 60% 40% 40%;
+
+    left: 50%;
+    top: 50%;
+
+    transform-origin: 50% 100%;
+
+    box-shadow:
+        inset 0 -4px 8px rgba(0,0,0,0.1);
+}
+
+.jsp1 {
+    transform:
+        translate(-50%, -100%)
+        rotate(0deg);
+}
+
+.jsp2 {
+    transform:
+        translate(-50%, -100%)
+        rotate(60deg);
+}
+
+.jsp3 {
+    transform:
+        translate(-50%, -100%)
+        rotate(120deg);
+}
+
+.jsp4 {
+    transform:
+        translate(-50%, -100%)
+        rotate(180deg);
+}
+
+.jsp5 {
+    transform:
+        translate(-50%, -100%)
+        rotate(240deg);
+}
+
+.jsp6 {
+    transform:
+        translate(-50%, -100%)
+        rotate(300deg);
+}
+
+.jardin-semilla-centro {
+    position: absolute;
+
+    left: 50%;
+    top: 50%;
+
+    width: 34px;
+    height: 34px;
+
+    background:
+        radial-gradient(
+            circle at 40% 40%,
+            #8d6e63,
+            #3e2723
+        );
+
+    border-radius: 50%;
+
+    transform:
+        translate(-50%, -50%);
+
+    z-index: 2;
+
+    box-shadow:
+        inset -3px -3px 6px rgba(0,0,0,0.4);
+}
+
+
+/* PARTÍCULAS */
+
+.jardin-semilla-particulas {
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    overflow: hidden;
+}
+
+.jardin-semilla-particulas .js-particula {
+    position: absolute;
+
+    width: 10px;
+    height: 10px;
+
+    background: #ffd600;
+
+    border-radius: 50%;
+
+    opacity: 0.9;
+
+    animation:
+        jardinSemillaCaer linear forwards;
+}
+
+@keyframes jardinSemillaCaer {
+
+    0% {
+        transform:
+            translateY(0)
+            rotate(0deg);
+
+        opacity: 1;
+    }
+
+    100% {
+        transform:
+            translateY(460px)
+            rotate(720deg);
+
+        opacity: 0;
+    }
+
+}
+
+
+/* RESET */
+
+.jardin-semilla-reset {
+    opacity: 0;
+    pointer-events: none;
+
+    transition:
+        opacity 0.4s ease;
+}
+
+.jardin-semilla-reset.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+
+/* MENSAJE */
+
+.jardin-semilla-mensaje {
+    max-width: 650px;
+    margin: 30px auto;
+
+    animation:
+        aparecer 1s ease;
+}
+
+.frase-jardin {
+    font-family: "Caveat", cursive;
+
+    font-size: 32px;
+
+    line-height: 1.5;
+
+    color: #735300;
+
+    margin-bottom: 30px;
+}
+
+
+/* =========================
+   ANIMACIONES
+========================= */
+
+@keyframes aparecer {
+
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+@keyframes flotar {
+
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+
+}
+
+@keyframes florMovimiento {
+
+    0%, 100% {
+        transform:
+            rotate(-3deg)
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            rotate(3deg)
+            translateY(-10px);
+    }
+
+}
+
+@keyframes latido {
+
+    0%, 100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.25);
+    }
+
+}
+
+@keyframes caer {
+
+    0% {
+        transform:
+            translateY(-50px)
+            rotate(0deg);
+
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    100% {
+        transform:
+            translateY(110vh)
+            translateX(150px)
+            rotate(360deg);
+
+        opacity: 0;
+    }
+
+}
+
+@keyframes subir {
+
+    0% {
+        transform:
+            translateY(0)
+            scale(0.5);
+
+        opacity: 0;
+    }
+
+    20% {
+        opacity: 1;
+    }
+
+    100% {
+        transform:
+            translateY(-110vh)
+            scale(1.4);
+
+        opacity: 0;
+    }
+
+}
+
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 700px) {
+
+    .seccion {
+        padding:
+            80px
+            15px
+            120px;
+    }
+
+    .hero h1 {
+        font-size: 65px;
+    }
+
+    .flor-grande {
+        font-size: 70px;
+    }
+
+    .ramo {
+        flex-wrap: wrap;
+    }
+
+    .flor-interactiva {
+        font-size: 50px;
+    }
+
+    .jardin {
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 15px;
+    }
+
+    .flor-boton {
+        font-size: 50px;
+    }
+
+    .dos-fotos {
+        grid-template-columns: 1fr;
+    }
+
+    .carta,
+    .carta-corta {
+        padding: 30px 20px;
+    }
+
+    .menu {
+        width: 95%;
+        justify-content: space-around;
+    }
+
+    .menu button {
+        padding: 8px;
+    }
+
+    .menu span {
+        font-size: 9px;
+    }
+
+    .jardin-semilla-escena {
+        height: 400px;
+    }
+
+    .jardin-semilla-flor {
+        bottom: 200px;
+    }
+
+    .jardin-semilla-petalo {
+        width: 36px;
+        height: 48px;
+    }
+
+    .frase-jardin {
+        font-size: 26px;
+    }
+
+}
+
+/* Texto negro en la carta de "Perdóname, mi vida" */
+#perdon .carta {
+    color: #222;
+}
+
+#perdon .carta p {
+    color: #222;
+}
+
+#perdon .carta .frase-destacada {
+    color: #b57b00;
+}
+
+#perdon .carta .firma {
+    color: #222;
+}

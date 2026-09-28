@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Para mi florecita 🌻💛</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- PÉTALOS -->
+    <div id="petalos"></div>
+
+    <!-- CORAZONES -->
+    <div id="corazones"></div>
+
+
+    <!-- =========================
+         INICIO
+    ========================== -->
+
+    <section id="inicio" class="seccion hero activa">
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-contenido">
+
+            <div class="flor-grande">🌻</div>
+
+            <p class="mini-titulo">
+                Para la persona que hace mis días más bonitos
+            </p>
+
+            <h1>
+                Para ti,<br>
+                mi buñuelito 💛
+            </h1>
+
+            <p class="subtitulo">
+                Puede que hoy no pueda entregarte unas flores
+                con mis propias manos...
+                pero hice algo especial para que puedas recibirlas
+                de una manera diferente.
+            </p>
+
+            <button class="boton-principal" onclick="irA('flores')">
+                🌻 Te doy tus flores amarillas
+            </button>
+
+            <button class="boton-secundario" onclick="irA('perdon')">
+                🥺 Tengo algo que decirte
+            </button>
+
+        </div>
+
+        <div class="scroll-indicator">
+            ↓ hay algo especial para ti ↓
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FLORES
+    ========================== -->
+
+    <section id="flores" class="seccion">
+
+        <div class="contenedor">
+
+            <span class="numero-seccion">01</span>
+
+            <h2>
+                🌻 Estas flores son para ti
+            </h2>
+
+            <div class="linea"></div>
+
+            <p class="texto-intro">
+                Cierra los ojos por un momento e imagina que estoy
+                frente a ti con un enorme ramo de flores amarillas.
+            </p>
+
+            <div class="ramo">
+
+                <div class="flor-interactiva">🌻</div>
+                <div class="flor-interactiva">🌻</div>
+                <div class="flor-interactiva">🌻</div>
+                <div class="flor-interactiva">🌻</div>
+                <div class="flor-interactiva">🌻</div>
+
+            </div>
+
+            <div class="carta-corta">
+
+                <p>
+                    Mi amorcito...
+                </p>
+
+                <p>
+                    Estas flores representan todo aquello que quisiera
+                    entregarte personalmente.
+                </p>
+
+                <p>
+                    No son solamente flores amarillas.
+                    Son abrazos, son besitos, son recuerdos,
+                    son disculpas y son todo ese amor que muchas veces
+                    no sé cómo explicar con palabras.
+                </p>
+
+                <p>
+                    🌻 <strong>Esta flor virtual es pequeña,
+                    pero todo lo que siento por ti es enorme.</strong>
+                </p>
+
+            </div>
+
+            <div class="foto-placeholder">
+
+                <img src="foto_flores.jpg"
+                     alt="Nuestro recuerdo"
+                     onerror="this.style.display='none'">
+
+                <div class="placeholder-text">
+                    📸
+                    <br>
+                    Aquí puedes poner una foto de ustedes
+                    <br>
+                    <small>foto_flores.jpg</small>
+                </div>
+
+            </div>
+
+            <button class="boton-principal" onclick="irA('perdon')">
+                🥺 Quiero decirte algo...
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         PERDÓN
+    ========================== -->
+
+    <section id="perdon" class="seccion fondo-oscuro">
+
+        <div class="contenedor">
+
+            <span class="numero-seccion">02</span>
+
+            <h2>
+                🥺 Perdóname, mi vida
+            </h2>
+
+            <div class="linea"></div>
+
+            <div class="carta">
+
+                <div class="sello">
+                    💛
+                </div>
+
+                <p>
+                    Mi buñuelito...
+                </p>
+
+                <p>
+                    Quiero pedirte perdón porque me hubiera encantado
+                    poder estar frente a ti y entregarte estas flores
+                    personalmente.
+                </p>
+
+                <p>
+                    Me hubiera gustado llegar con ellas en mis manos,
+                    mirarte a los ojos y decirte:
+                    <em>"Son para ti."</em>
+                </p>
+
+                <p>
+                    Pero esta vez no pude hacerlo como quería.
+                    Y aunque unas flores virtuales no pueden reemplazar
+                    ese momento, no quería dejar pasar la oportunidad
+                    de tener un detalle contigo.
+                </p>
+
+                <p>
+                    Por eso hice esta pequeña página.
+                </p>
+
+                <p>
+                    Porque aunque no pueda darte físicamente cada flor,
+                    sí puedo darte mis palabras, mis sentimientos
+                    y un pedacito de todo el amor que siento por ti.
+                </p>
+
+                <p class="frase-destacada">
+                    "Perdóname por no poder darte las flores que
+                    quería darte, pero nunca dudes de las ganas
+                    que tengo de hacerte feliz." 💛
+                </p>
+
+                <p>
+                    Te prometo que algún día quiero compensarlo
+                    con un ramo de verdad.
+                </p>
+
+                <p class="firma">
+                    Con todo mi amor,<br>
+                    Andres 💘
+                </p>
+
+            </div>
+
+            <button class="boton-principal" onclick="irA('sentimientos')">
+                ❤️ Ahora quiero hablarte de mi amor
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SENTIMIENTOS
+    ========================== -->
+
+    <section id="sentimientos" class="seccion">
+
+        <div class="contenedor">
+
+            <span class="numero-seccion">03</span>
+
+            <h2>
+                ❤️ Lo que siento por ti
+            </h2>
+
+            <div class="linea"></div>
+
+            <div class="texto-amor">
+
+                <p>
+                    A veces siento que las palabras se quedan pequeñas
+                    para explicar todo lo que significas para mí.
+                </p>
+
+                <p>
+                    Porque no eres simplemente alguien que quiero.
+                    Eres alguien que se volvió parte de mis días,
+                    de mis pensamientos y de mis sueños.
+                </p>
+
+                <p>
+                    Eres esa persona que extraño cuando no está,
+                    la persona que quiero abrazar cuando tengo un día
+                    difícil y también la persona con la que quiero
+                    compartir mis momentos felices.
+                </p>
+
+                <p>
+                    Me gusta saber que existes.
+                    Me gusta saber que puedo llamarte mi amorcito,
+                    mi vida, mi cielo y, sobre todo...
+                </p>
+
+                <h3>
+                    mi buñuelito. 💛
+                </h3>
+
+                <p>
+                    Quiero seguir aprendiendo a quererte mejor,
+                    escuchar más, entender más y demostrarte con
+                    acciones todo aquello que siento.
+                </p>
+
+                <p class="frase-grande">
+                    "Lo mejor de mi vida no es lo que tengo,
+                    sino que tú estás en ella." 💘
+                </p>
+
+            </div>
+
+            <div class="dos-fotos">
+
+                <div class="foto-placeholder pequeño">
+
+                    <img src="foto1.jpg"
+                         alt="Foto 1"
+                         onerror="this.style.display='none'">
+
+                    <div class="placeholder-text">
+                        📸<br>
+                        FOTO 1<br>
+                        <small>foto1.jpg</small>
+                    </div>
+
+                </div>
+
+                <div class="foto-placeholder pequeño">
+
+                    <img src="foto2.jpg"
+                         alt="Foto 2"
+                         onerror="this.style.display='none'">
+
+                    <div class="placeholder-text">
+                        📸<br>
+                        FOTO 2<br>
+                        <small>foto2.jpg</small>
+                    </div>
+
+                </div>
+
+            </div>
+
+            <button class="boton-principal" onclick="irA('mensajes')">
+                🌼 Descubre lo que dice cada flor
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         FLORES INTERACTIVAS
+    ========================== -->
+
+    <section id="mensajes" class="seccion fondo-amarillo">
+
+        <div class="contenedor">
+
+            <span class="numero-seccion">04</span>
+
+            <h2>
+                🌼 Unas flores tienen algo que decirte
+            </h2>
+
+            <p class="texto-intro">
+                Presiona cada flor.
+            </p>
+
+            <div class="jardin">
+
+                <button class="flor-boton" onclick="mostrarMensaje(1)">
+                    🌻
+                    <span>Flor #1</span>
+                </button>
+
+                <button class="flor-boton" onclick="mostrarMensaje(2)">
+                    🌻
+                    <span>Flor #2</span>
+                </button>
+
+                <button class="flor-boton" onclick="mostrarMensaje(3)">
+                    🌻
+                    <span>Flor #3</span>
+                </button>
+
+                <button class="flor-boton" onclick="mostrarMensaje(4)">
+                    🌻
+                    <span>Flor #4</span>
+                </button>
+
+                <button class="flor-boton" onclick="mostrarMensaje(5)">
+                    🌻
+                    <span>Flor #5</span>
+                </button>
+
+                <button class="flor-boton" onclick="mostrarMensaje(6)">
+                    🌻
+                    <span>Flor #6</span>
+                </button>
+
+            </div>
+
+            <div id="mensajeFlor" class="mensaje-flor">
+
+                <div class="mensaje-icono">
+                    🌻
+                </div>
+
+                <p>
+                    Elige una flor...
+                </p>
+
+            </div>
+
+            <button class="boton-principal" onclick="irA('semilla-flor')">
+                🌱 Ahora planta una semilla
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SEMILLA → FLOR
+    ========================== -->
+
+    <section id="semilla-flor" class="seccion jardin-semilla-seccion">
+
+        <div class="contenedor">
+
+            <span class="numero-seccion">05</span>
+
+            <h2>
+                🌱 Planta tu propia flor
+            </h2>
+
+            <div class="linea"></div>
+
+            <p class="texto-intro">
+                Aquí no te doy la flor ya hecha...
+                quiero que la hagas nacer tú.
+                Toca la tierra y mira lo que pasa.
+            </p>
+
+            <p class="instruccion">
+                🌱 Toca la tierra para plantar tu semilla
+            </p>
+
+            <div class="jardin-semilla-escena">
+
+                <div class="jardin-semilla-sol"></div>
+
+                <div class="jardin-semilla-nube jardin-semilla-nube1"></div>
+                <div class="jardin-semilla-nube jardin-semilla-nube2"></div>
+
+                <div class="jardin-semilla-tierra" id="jardinSemillaTierra">
+
+                    <div class="jardin-semilla-semilla"
+                         id="jardinSemillaSemilla"></div>
+
+                    <div class="jardin-semilla-tallo"
+                         id="jardinSemillaTallo"></div>
+
+                    <div class="jardin-semilla-hoja jardin-semilla-hoja-izq"
+                         id="jardinSemillaHojaIzq"></div>
+
+                    <div class="jardin-semilla-hoja jardin-semilla-hoja-der"
+                         id="jardinSemillaHojaDer"></div>
+
+                    <div class="jardin-semilla-flor"
+                         id="jardinSemillaFlor">
+
+                        <span class="jardin-semilla-petalo jsp1"></span>
+                        <span class="jardin-semilla-petalo jsp2"></span>
+                        <span class="jardin-semilla-petalo jsp3"></span>
+                        <span class="jardin-semilla-petalo jsp4"></span>
+                        <span class="jardin-semilla-petalo jsp5"></span>
+                        <span class="jardin-semilla-petalo jsp6"></span>
+
+                        <span class="jardin-semilla-centro"></span>
+
+                    </div>
+
+                </div>
+
+                <div class="jardin-semilla-particulas"
+                     id="jardinSemillaParticulas"></div>
+
+            </div>
+
+            <button class="boton-principal jardin-semilla-reset"
+                    id="jardinSemillaReset">
+
+                🔄 Plantar otra semilla
+
+            </button>
+
+            <div id="jardinSemillaMensaje"
+                 class="jardin-semilla-mensaje oculto">
+
+                <p class="frase-jardin">
+                    Así como esta flor nació de una semilla,
+                    todo lo bonito que siento por ti también
+                    creció poquito a poco. 💛
+                </p>
+
+                <button class="boton-principal"
+                        onclick="irA('sorpresa')">
+
+                    ✨ Ahora sí... tengo mi última sorpresa
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         SORPRESA FINAL
+    ========================== -->
+
+    <section id="sorpresa" class="seccion sorpresa">
+
+        <div class="contenedor">
+
+            <div id="sorpresa-contenido">
+
+                <div class="flor-final">
+                    🌻
+                </div>
+
+                <span class="numero-seccion">
+                    ✨
+                </span>
+
+                <h2>
+                    Una última sorpresa
+                </h2>
+
+                <div class="linea"></div>
+
+                <p class="texto-intro">
+                    Porque una sola flor nunca sería suficiente
+                    para representar todo lo que siento por ti.
+                </p>
+
+                <button class="boton-principal"
+                        onclick="abrirSorpresa()">
+
+                    💛 Abrir mi sorpresa
+
+                </button>
+
+            </div>
+
+
+            <div id="mensaje-final"
+                 class="mensaje-final oculto">
+
+                <div class="ramo-final">
+                    🌻🌻🌻
+                </div>
+
+                <h1>
+                    Te quiero muchísimo,
+                    mi buñuelito. 💘
+                </h1>
+
+                <p>
+                    Si pudiera convertir cada pensamiento bonito
+                    que tengo sobre ti en una flor,
+                    necesitaría un jardín entero.
+                </p>
+
+                <p>
+                    Gracias por existir, por formar parte de mis días
+                    y por ser una persona tan especial para mí.
+                </p>
+
+                <h3>
+                    Siempre quiero seguir cuidando
+                    lo bonito que tenemos. 💛
+                </h3>
+
+                <div class="corazon-final">
+                    💘
+                </div>
+
+                <p class="final-firma">
+                    Con todo mi cariño,<br>
+                    para mi buñuelito 🌻
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         MENÚ
+    ========================== -->
+
+    <nav class="menu">
+
+        <button onclick="irA('inicio')">
+            🏠
+            <span>Inicio</span>
+        </button>
+
+        <button onclick="irA('flores')">
+            🌻
+            <span>Flores</span>
+        </button>
+
+        <button onclick="irA('sentimientos')">
+            ❤️
+            <span>Amor</span>
+        </button>
+
+        <button onclick="irA('mensajes')">
+            🌼
+            <span>Mensajes</span>
+        </button>
+
+        <button onclick="irA('semilla-flor')">
+            🌱
+            <span>Semilla</span>
+        </button>
+
+        <button onclick="irA('sorpresa')">
+            ✨
+            <span>Sorpresa</span>
+        </button>
+
+    </nav>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
+
+    
